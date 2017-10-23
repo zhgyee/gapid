@@ -35,7 +35,7 @@ if(NOT DISABLED_CXX)
             "-D_GLIBCXX_INCLUDE_NEXT_C_HEADERS"   # Avoids redefinition compile error
         )
     else()
-        target_compile_options(astc-encoder PRIVATE "-Wno-c++11-narrowing")
+        target_compile_options(astc-encoder PRIVATE "-Wno-narrowing")
     endif()
     target_include_directories(astc-encoder PUBLIC "${astc-encoder_gen}")
 endif()
